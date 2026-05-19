@@ -2,6 +2,7 @@
 
 
 #include "DP/TP1/E01_DP.h"
+#include "Engine/Engine.h"
 
 // Sets default values
 AE01_DP::AE01_DP()
@@ -16,18 +17,18 @@ void AE01_DP::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	MostrarMensaje(FString::Printf(TEXT("N = %d", N)));
-	MostrarMensaje(FString::Printf(TEXT("A = %.2f", A)));
-	MostrarMensaje(FString::Printf(TEXT("C = %s", *C)));
+	MostrarMensaje(FString::Printf(TEXT("N = %d"), N));
+	MostrarMensaje(FString::Printf(TEXT("A = %.2f"), A));
+	MostrarMensaje(FString::Printf(TEXT("C = %s"), *C));
 	
 	float Suma = N+A;
 	float Resta = A-N;
 	
-	MostrarMensaje(FString::Printf(TEXT("N + A = %.2f", Suma)));
-	MostrarMensaje(FString::Printf(TEXT("A - N = %.2f", Resta)));
+	MostrarMensaje(FString::Printf(TEXT("N + A = %.2f"), Suma));
+	MostrarMensaje(FString::Printf(TEXT("A - N = %.2f"), Resta));
 	
 	int32 ValorNumerico = static_cast<int32>(C[0]);
-	MostrarMensaje(FString::Printf(TEXT("Valor Numérico C = %d", ValorNumerico)));
+	MostrarMensaje(FString::Printf(TEXT("Valor Numérico C = %d"), ValorNumerico));
 	
 }
 
