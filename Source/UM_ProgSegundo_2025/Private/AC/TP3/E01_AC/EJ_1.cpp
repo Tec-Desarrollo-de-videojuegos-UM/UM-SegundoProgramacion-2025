@@ -23,8 +23,8 @@ void AEJ_1::BeginPlay()
 	
 	float Suma = Numero + A;
 	float Resta = A - Numero;
-	MostrarMensaje(FString :: Printf(TEXT("Numero = %.2f"), Suma));
-	MostrarMensaje(FString :: Printf(TEXT("A = %.2f"), Resta));
+	MostrarMensaje(FString::Printf(TEXT("Numero + A = %.2f"), Suma));
+	MostrarMensaje(FString::Printf(TEXT("A - Numero = %.2f"), Resta));
 	
 	int32 valornumerico = static_cast<int32>(C[0]);
 	MostrarMensaje(FString :: Printf(TEXT("Valor Numerico = %d"), valornumerico));
@@ -36,7 +36,7 @@ void AEJ_1 :: MostrarMensaje(const FString Mensaje, FColor Color)
 {
 	if (GEngine)
 	{
-		GEngine->AddOnScreenDebugMessage(0, 1.5F, Color, Mensaje);
+		GEngine->AddOnScreenDebugMessage(-1, 1.5F, Color, Mensaje);
 	}
 	
 	UE_LOG(LogTemp, Warning, TEXT("%s"), *Mensaje);
