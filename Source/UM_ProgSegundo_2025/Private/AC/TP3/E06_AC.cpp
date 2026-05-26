@@ -32,7 +32,7 @@ void AE06_AC::MostrarMensaje(const FString Mensaje, FColor Color)
 {
 	if (GEngine)
 	{
-		// ID diferente para cada mensaje
+		
 		static int32 MensajeID = 0;
 
 		GEngine->AddOnScreenDebugMessage(MensajeID++,5.f,Color,Mensaje);
