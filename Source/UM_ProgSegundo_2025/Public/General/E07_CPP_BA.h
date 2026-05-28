@@ -4,22 +4,18 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "E01_CPP_BA.generated.h"
+#include "E07_CPP_BA.generated.h"
 
 UCLASS()
-class UM_PROGSEGUNDO_2025_API AE01_CPP_BA : public AActor
+class UM_PROGSEGUNDO_2025_API AE07_CPP_BA : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AE01_CPP_BA();
+	AE07_CPP_BA();
 	
-	int32 Numero = 5;
-	float A = 4.56f;
-	FString C = TEXT("A");
-	
-	static void MostrarMensaje(const FString& Mensaje, FColor Color);
+	int32 Contador = 10;
 
 protected:
 	// Called when the game starts or when spawned
