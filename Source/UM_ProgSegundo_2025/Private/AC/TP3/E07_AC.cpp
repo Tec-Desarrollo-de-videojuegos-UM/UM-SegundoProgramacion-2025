@@ -18,11 +18,11 @@ void AE07_AC::BeginPlay()
 
 	while (Contador >= 0)
 	{
-		MostrarMensaje(FString::Printf(TEXT("Lanzamiento en: %d"), Contador),FColor::Red);
+		MostrarMensaje(FString::Printf(TEXT("Lanzamiento en: %d"), Contador),FColor::Cyan);
 		Contador--;
 		
 	}
-	MostrarMensaje(FString::Printf(TEXT("!Despegue¡")),FColor::Green);
+	MostrarMensaje(FString::Printf(TEXT("!Despegue¡")),FColor::Red);
 }
 void AE07_AC::MostrarMensaje(const FString Mensaje, FColor Color)
 {
