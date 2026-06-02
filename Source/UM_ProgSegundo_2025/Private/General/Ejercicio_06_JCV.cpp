@@ -36,3 +36,8 @@ void AEjercicio_06_JCV::MostrarMensaje(const FString& Mensaje, FColor Color)
 	}
 	UE_LOG(LogTemp, Warning, TEXT("%s"), *Mensaje);
 }
+
+void AEjercicio_06_JCV::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+}
