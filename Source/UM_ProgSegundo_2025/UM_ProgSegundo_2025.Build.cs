@@ -13,6 +13,7 @@ public class UM_ProgSegundo_2025 : ModuleRules
 			"CoreUObject",
 			"Engine",
 			"InputCore",
+			"Niagara",
 			"EnhancedInput",
 			"AIModule",
 			"StateTreeModule",
