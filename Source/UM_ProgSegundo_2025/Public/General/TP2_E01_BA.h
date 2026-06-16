@@ -15,16 +15,21 @@ class UM_PROGSEGUNDO_2025_API ATP2_E01_BA : public AActor
 public:	
 	// Sets default values for this actor's properties
 	ATP2_E01_BA();
-	
-	UPROPERTY(EditAnywhere, Category = "Componentes")
-	UTextRenderComponent* Texto;
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
+	virtual void OnConstruction(const FTransform& Transform) override;
+private:
+	UPROPERTY(VisibleAnywhere, Category = "Componentes")
+	USceneComponent* Root;
+	
+	UPROPERTY(VisibleAnywhere, Category = "Componentes")
+	UTextRenderComponent* Texto;
+	
+public:
+	UPROPERTY(EditAnywhere, Category = "Mensaje")
+	FText TextoDelMensaje = FText::FromString(TEXT("Hola Mundo"));
+	
+	UPROPERTY(EditAnywhere, Category = "Mensaje")
+	FColor Color = FColor::Blue;
+	
 };

@@ -6,22 +6,30 @@
 // Sets default values
 ATP2_E01_BA::ATP2_E01_BA()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
-}
-
-// Called when the game starts or when spawned
-void ATP2_E01_BA::BeginPlay()
-{
-	Super::BeginPlay();
+ 	PrimaryActorTick.bCanEverTick = false;
 	
+	Root = CreateDefaultSubobject<USceneComponent>("Root");
+	RootComponent = Root;
+	
+	Texto = CreateDefaultSubobject<UTextRenderComponent>("Texto");
+	Texto->SetupAttachment(Root);
+	
+	Texto->SetRelativeLocation(FVector(0, 0, 150));
+	Texto->SetHorizontalAlignment(EHTA_Center);
+	Texto->SetWorldSize(80);
+
 }
 
-// Called every frame
-void ATP2_E01_BA::Tick(float DeltaTime)
+void ATP2_E01_BA::OnConstruction(const FTransform& Transform)
 {
-	Super::Tick(DeltaTime);
-
+	Super::OnConstruction(Transform);
+	
+	if (Texto)
+	{
+		Texto->SetText(TextoDelMensaje);
+		Texto->SetTextRenderColor(Color);
+		
+	}
 }
+
 
