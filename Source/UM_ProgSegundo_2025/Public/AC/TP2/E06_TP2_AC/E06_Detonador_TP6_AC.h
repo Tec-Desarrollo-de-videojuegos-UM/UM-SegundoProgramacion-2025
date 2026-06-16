@@ -3,9 +3,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include"Engine/TargetPoint.h"
-#include"Components/StaticMeshComponent.h"
-#include"Components/BoxComponent.h"
+#include "Engine/TargetPoint.h"
+#include "Components/SceneComponent.h"
+#include "Components/StaticMeshComponent.h"
+#include "Components/BoxComponent.h"
 #include "E06_Explocion_TP2_AC.h"
 #include "E06_Detonador_TP6_AC.generated.h"
 

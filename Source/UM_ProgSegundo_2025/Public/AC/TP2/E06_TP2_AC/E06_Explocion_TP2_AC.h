@@ -2,10 +2,13 @@
 
 #pragma once
 
+
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "NiagaraCommon.h"
-#include"Components/AudioComponent.h"
+#include "Components/SceneComponent.h"
+#include "Components/AudioComponent.h"
+#include "NiagaraComponent.h"
 #include "E06_Explocion_TP2_AC.generated.h"
 
 
@@ -13,19 +16,17 @@ UCLASS()
 class UM_PROGSEGUNDO_2025_API AE06_Explocion_TP2_AC : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
+
+public:
 	AE06_Explocion_TP2_AC();
 
 private:
-	UPROPERTY(VisibleAnywhere,Category ="Componentes")
+	UPROPERTY(VisibleAnywhere, Category = "Componentes")
 	USceneComponent* Raiz;
 
-	UPROPERTY(VisibleAnywhere,Category ="Componentes")
+	UPROPERTY(VisibleAnywhere, Category = "Componentes")
 	UNiagaraComponent* EfectoExplosion;
 
-	UPROPERTY(VisibleAnywhere,Category ="Componentes")
+	UPROPERTY(VisibleAnywhere, Category = "Componentes")
 	UAudioComponent* SonidoExplosion;
-
 };
