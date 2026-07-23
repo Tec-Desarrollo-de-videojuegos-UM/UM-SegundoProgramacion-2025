@@ -3,25 +3,23 @@
 
 #include "General/TP2_E05_BA.h"
 
+#include "Components/AudioComponent.h"
+
 // Sets default values
 ATP2_E05_BA::ATP2_E05_BA()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
-}
-
-// Called when the game starts or when spawned
-void ATP2_E05_BA::BeginPlay()
-{
-	Super::BeginPlay();
+	PrimaryActorTick.bCanEverTick = false;
 	
-}
-
-// Called every frame
-void ATP2_E05_BA::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
+	Raiz = CreateDefaultSubobject<USceneComponent>(TEXT("Raiz"));
+	RootComponent = Raiz;
+	
+	EfectoExplosion = CreateDefaultSubobject<UNiagaraComponent>(TEXT("EfectoExplosion"));
+	EfectoExplosion->SetupAttachment(Raiz);
+	
+	SonidoExplosion = CreateDefaultSubobject<UAudioComponent>(TEXT("Sonido"));
+	SonidoExplosion->SetupAttachment(Raiz);
+	
+	InitialLifeSpan = 5.0f;
 }
 

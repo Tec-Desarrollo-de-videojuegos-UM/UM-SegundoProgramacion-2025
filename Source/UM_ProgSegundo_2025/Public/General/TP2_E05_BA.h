@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "NiagaraComponent.h"
 #include "TP2_E05_BA.generated.h"
 
 UCLASS()
@@ -17,16 +18,20 @@ public:
 
 protected:
 	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	//virtual void BeginPlay() override;
 
 public:	
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	//virtual void Tick(float DeltaTime) override;
 	
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Componentes")
 	USceneComponent* Raiz;
 	
 	UPROPERTY(VisibleAnywhere, Category = "Componentes")
+	UNiagaraComponent* EfectoExplosion;
+	
+	UPROPERTY(VisibleAnywhere, Category = "Componentes")
+	UAudioComponent* SonidoExplosion;
 	
 };
