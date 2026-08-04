@@ -20,7 +20,7 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Puerta")
 	bool bEstaAbierta;
-
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Puerta")
 	bool bRequiereLlave;
 
@@ -34,6 +34,9 @@ public:
 	// Evento para Blueprint cuando la puerta se abre
 	UFUNCTION(BlueprintImplementableEvent, Category = "Puerta")
 	void EventoPuertaAbierta();
+	
+	UFUNCTION(BlueprintImplementableEvent, Category = "Puerta")
+	void EventoPuertaBloqueada();
 
 protected:
 

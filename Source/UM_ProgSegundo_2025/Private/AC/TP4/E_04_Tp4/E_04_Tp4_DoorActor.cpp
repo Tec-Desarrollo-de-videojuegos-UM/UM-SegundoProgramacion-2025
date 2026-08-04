@@ -1,6 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "AC/TP4/E_04_Tp4/E_04_Tp4_DoorActor.h"
 #include "Components/StaticMeshComponent.h"
 #include "AC/TP4/E_01/E_01_Ac_UKeyHolderComponent.h"
@@ -31,6 +28,8 @@ void AE_04_Tp4_DoorActor::Interactuar_Implementation(AActor* Interactor)
 	else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("La puerta está cerrada. Necesitas una llave."));
+
+		EventoPuertaBloqueada();
 	}
 }
 
@@ -72,10 +71,9 @@ void AE_04_Tp4_DoorActor::AbrirPuerta()
 
 	SetActorRotation(FRotator(0.f, AnguloApertura, 0.f));
 
-	// Llama al Blueprint
+	// Evento para Blueprint
 	EventoPuertaAbierta();
-}
-
+};
 
 
 
