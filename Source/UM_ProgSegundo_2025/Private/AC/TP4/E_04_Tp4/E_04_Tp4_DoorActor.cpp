@@ -72,7 +72,8 @@ void AE_04_Tp4_DoorActor::AbrirPuerta()
 
 	SetActorRotation(FRotator(0.f, AnguloApertura, 0.f));
 
-	
+	// Llama al Blueprint
+	EventoPuertaAbierta();
 }
 
 

@@ -1,6 +1,5 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AC/TP4/E_03_Tp4/E_03_tp4_ActorInteractuable.h"
 #include "Components/StaticMeshComponent.h"
@@ -31,6 +30,10 @@ protected:
 public:
 
 	virtual void Interactuar_Implementation(AActor* Interactor) override;
+
+	// Evento para Blueprint cuando la puerta se abre
+	UFUNCTION(BlueprintImplementableEvent, Category = "Puerta")
+	void EventoPuertaAbierta();
 
 protected:
 
